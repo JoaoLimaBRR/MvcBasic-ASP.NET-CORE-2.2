@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using AppMvcBasica.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,11 @@ namespace AppMvcBasica.Data
             : base(options)
         {
         }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Provider> Providers { get; set; }
+
+        public DbSet<Adress> Adresses { get; set; }
     }
 }
